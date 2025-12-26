@@ -1,0 +1,30 @@
+{
+  "dashboard": {
+    "title": "Ozon Business Analytics",
+    "tags": ["ozon", "ecommerce", "business"],
+    "panels": [
+      {
+        "id": 1,
+        "title": "Total Offers",
+        "type": "stat",
+        "datasource": "ClickHouse",
+        "targets": [{
+          "rawSql": "SELECT count() as value FROM ecom_offers",
+          "refId": "A"
+        }],
+        "gridPos": {"h": 3, "w": 6, "x": 0, "y": 0}
+      },
+      {
+        "id": 2,
+        "title": "Top 10 Categories",
+        "type": "table",
+        "datasource": "ClickHouse",
+        "targets": [{
+          "rawSql": "SELECT category_id as Category, count() as Offers FROM ecom_offers GROUP BY category_id ORDER BY Offers DESC LIMIT 10",
+          "refId": "A"
+        }],
+        "gridPos": {"h": 10, "w": 12, "x": 0, "y": 3}
+      }
+    ]
+  }
+}

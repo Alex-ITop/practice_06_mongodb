@@ -1,0 +1,61 @@
+﻿global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    environment: 'development'
+    project: 'ozon-analytics'
+
+rule_files:
+  - "alert.rules"
+
+scrape_configs:
+  # MongoDB Exporter
+  - job_name: 'mongodb'
+    static_configs:
+      - targets: ['mongodb_exporter:9216']
+    scrape_interval: 10s
+    metrics_path: /metrics
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+        replacement: 'mongodb'
+
+  # MongoDB самого (через mongodb_exporter)
+  - job_name: 'mongodb_metrics'
+    static_configs:
+      - targets: ['mongodb:27017']
+    metrics_path: /metrics
+    params:
+      gather_per_db_stats: ['true']
+      gather_top_metrics: ['true']
+      gather_collection_metrics: ['true']
+      gather_conn_pool_stats: ['true']
+
+  # ClickHouse
+  - job_name: 'clickhouse'
+    static_configs:
+      - targets: ['clickhouse:9363']
+    scrape_interval: 15s
+
+  # Node Exporter (если нужно)
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node-exporter:9100']
+    scrape_interval: 15s
+
+  # Prometheus сам себя
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # cAdvisor (мониторинг контейнеров)
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['cadvisor:8080']
+    scrape_interval: 15s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+          # - alertmanager:9093

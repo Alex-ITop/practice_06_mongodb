@@ -1,0 +1,81 @@
+{
+  "generated_at": "2025-12-26T20:06:51.751627",
+  "source_file": "ozon_inference_2025_10_17_offers_2025_10_17.pq",
+  "total_products_created": 1355049,
+  "top_product_types": [
+    {
+      "type": "\u041b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435 \u0441\u0440\u0435\u0434\u0441\u0442\u0432\u043e \u0431\u0435\u0437\u0440\u0435\u0446\u0435\u043f\u0442\u0443\u0440\u043d\u043e\u0435",
+      "count": 10167,
+      "percentage": 0.7503049705213611
+    },
+    {
+      "type": "\u041f\u0435\u0447\u0430\u0442\u043d\u0430\u044f \u043a\u043d\u0438\u0433\u0430",
+      "count": 9657,
+      "percentage": 0.7126679551809565
+    },
+    {
+      "type": "\u041b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435 \u0441\u0440\u0435\u0434\u0441\u0442\u0432\u043e \u0440\u0435\u0446\u0435\u043f\u0442\u0443\u0440\u043d\u043e\u0435",
+      "count": 8528,
+      "percentage": 0.6293499349470019
+    },
+    {
+      "type": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430\u044f \u043a\u043d\u0438\u0433\u0430",
+      "count": 3382,
+      "percentage": 0.24958507035538935
+    },
+    {
+      "type": "\u0421\u0443\u043c\u043a\u0430",
+      "count": 3106,
+      "percentage": 0.2292168032299939
+    }
+  ],
+  "partner_distribution": [
+    {
+      "partner": "_ozon",
+      "count": 1355049,
+      "percentage": 100.0
+    }
+  ],
+  "category_level_distribution": [
+    {
+      "level": 1,
+      "count": 600,
+      "percentage": 0.04427884157694666
+    },
+    {
+      "level": 2,
+      "count": 21753,
+      "percentage": 1.6053294013722013
+    },
+    {
+      "level": 3,
+      "count": 416135,
+      "percentage": 30.70995956603783
+    },
+    {
+      "level": 4,
+      "count": 859577,
+      "percentage": 63.4351230103118
+    },
+    {
+      "level": 5,
+      "count": 39074,
+      "percentage": 2.883585759629357
+    },
+    {
+      "level": 6,
+      "count": 15762,
+      "percentage": 1.1632051682263889
+    },
+    {
+      "level": 7,
+      "count": 1605,
+      "percentage": 0.11844590121833233
+    },
+    {
+      "level": 8,
+      "count": 543,
+      "percentage": 0.04007235162713673
+    }
+  ]
+}

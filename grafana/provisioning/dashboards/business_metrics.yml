@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: 'business-metrics'
+    orgId: 1
+    folder: 'Business Analytics'
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/business
